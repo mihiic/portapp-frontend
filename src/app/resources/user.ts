@@ -1,13 +1,13 @@
 export class User {
 
   constructor(
-    public firstName: string,
-    public lastName: string,
-    public dateOfBirth: Date,
-    public about?: string
+    public firstName: String,
+    public lastName: String,
+    public subtitle: String,
+    public profilePhoto: String
   ){}
 
-  getFullName(): string {
+  public getFullName(): String {
     return `${this.firstName} ${this.lastName}`;
   }
 }

@@ -1,2 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.wrapper {
+  background-color: #1a1a1a;
+  min-height: 1000px;
+}
+
+.content {
+  color: grey;
+  min-height: 1000px;
+  background-color: #0f0f0f;
+}
+
+.highlight {
+  color: white;
+}
+
+.centered {
+  text-align: center;
+}
+
+.social-icon {
+  padding: 10px;
+  color: grey;
+}
+
+.social-icon:hover {
+  color: white;
+}
+
+.margin-top-lg {
+  padding-top: 100px;
+}
+
+.margin-bot-lg {
+  padding-bottom: 100px;
+}
+
+.profile-photo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-height: 200px;
+  display: block;
+  margin: auto;
+}
+
+hr{
+  border: 1px solid #252525;
+}
+
