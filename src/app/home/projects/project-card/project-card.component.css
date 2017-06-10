@@ -1,0 +1,43 @@
+.project-card {
+  width: 300px;
+  position: relative;
+  display: block;
+  margin: 14px auto;
+}
+
+.project-card-image {
+  position: absolute;
+  left: 0; top: 0;
+  height: 150px;
+  width: 300px;
+  opacity: 0.3;
+}
+
+.project-card:hover > .project-card-image {
+  opacity: 1;
+}
+
+.project-card:hover > .project-card-text {
+  opacity: 1;
+}
+
+.project-card-text {
+  padding-top: 120px;
+  padding-left: 10px;
+  z-index: 100;
+  position: relative;
+  text-align: left;
+  opacity: 0.5;
+}
+
+.project-card-title {
+  color: white;
+  text-shadow: 2px 2px #111;
+  font-size: 20px;
+}
+
+.project-card-technology {
+  text-shadow: 1px 1px #111;
+  font-size: 14px;
+  text-align: right;
+}

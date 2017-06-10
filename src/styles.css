@@ -2,16 +2,14 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 .wrapper {
-  background-color: #1a1a1a;
+  background-color: #000;
   min-height: 1000px;
+  color: grey;
 }
 
 .content {
-  color: grey;
-  min-height: 1000px;
   background-color: #0f0f0f;
 }
-
 .highlight {
   color: white;
 }
@@ -26,7 +24,7 @@
 }
 
 .social-icon:hover {
-  color: white;
+  color: gold;
 }
 
 .margin-top-lg {
@@ -45,7 +43,10 @@
   margin: auto;
 }
 
-hr{
+hr {
   border: 1px solid #252525;
 }
 
+.gold {
+  color: gold;
+}

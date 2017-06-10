@@ -5,7 +5,7 @@ export class User {
     public lastName: String,
     public subtitle: String,
     public profilePhoto: String
-  ){}
+  ) {}
 
   public getFullName(): String {
     return `${this.firstName} ${this.lastName}`;

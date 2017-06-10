@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './resources/user';
 import { Observable } from 'rxjs/Observable';
-import { SocialLink } from "./resources/socialLink";
+import { SocialLink } from './resources/socialLink';
 
 @Injectable()
 export class UserService {
@@ -47,7 +47,9 @@ export class UserService {
   public getSocial(): Observable<SocialLink[]> {
     const socialLinks: SocialLink[] = [
       { name: 'instagram', link: 'https://www.instagram.com/mihiic/'},
-      { name: 'linkedin', link: 'https://www.linkedin.com/in/mihiic/'}
+      { name: 'linkedin', link: 'https://www.linkedin.com/in/mihiic/'},
+      { name: 'youtube', link: 'https>//www.facebook.com/'},
+      { name: 'github', link: 'https://www.github.com/' }
     ]
 
     return Observable.create(observer => {
