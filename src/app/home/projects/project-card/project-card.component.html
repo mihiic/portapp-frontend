@@ -1,11 +1,12 @@
-<div class="project-card">
+<div class="project-card" [routerLink]="[ '/project', project.id ]">
   <img class="project-card-image" [src]="project.thumbnailImage">
 
   <div class="project-card-text">
     <span class="project-card-title" [innerHtml]="trimedProjectName()"></span><br />
   </div>
-  <span class="project-card-technology gold" [innerHtml]="technologiesText()"></span>
 
-  <div class="project-card-description" [innerHtml]="trimmedDescription()">
+  <span class="project-card-technology" [innerHtml]="technologiesText()"></span>
+  <div class="project-card-content">
+    <div class="project-card-description" [innerHtml]="trimmedDescription()"></div>
   </div>
 </div>

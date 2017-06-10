@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../../projects.service';
 import { Project } from '../../resources/project';
-import {Pagination} from '../../resources/pagination';
+import { Pagination } from '../../resources/pagination';
 
 @Component({
   selector: 'app-projects',

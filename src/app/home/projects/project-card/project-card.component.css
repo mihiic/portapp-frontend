@@ -3,17 +3,19 @@
   position: relative;
   display: block;
   margin: 14px auto;
+  cursor: pointer;
+  /*border: 1px solid #222;*/
+}
+
+.project-card:hover {
+  /*border: 1px solid #333;*/
 }
 
 .project-card-image {
   position: absolute;
   left: 0; top: 0;
   height: 150px;
-  width: 300px;
-  opacity: 0.3;
-}
-
-.project-card:hover > .project-card-image {
+  width: 298px;
   opacity: 1;
 }
 
@@ -40,4 +42,12 @@
   text-shadow: 1px 1px #111;
   font-size: 14px;
   text-align: right;
+  color: darkgoldenrod;
+  padding-left: 7px;
+}
+
+.project-card-content {
+  padding: 7px;
+  height: 135px;
+  color: grey;
 }

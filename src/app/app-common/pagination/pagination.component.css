@@ -1,0 +1,24 @@
+.pagination {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.pagination-link {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+
+.link-disabled {
+  color: #513C0A;
+}
+
+.link-active {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.link-active:hover {
+  color: gold;
+}
