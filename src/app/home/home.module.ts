@@ -11,7 +11,8 @@ import { AppCommonModule } from '../app-common/app-common.module';
 
 const homeRoutes: Routes = [
   { path: 'home',         component: HomepageComponent },
-  { path: 'projects/:id', component: ProjectComponent }
+  { path: 'projects/:id', component: ProjectComponent },
+  { path: 'projects',     component: ProjectsComponent }
 ];
 
 @NgModule({

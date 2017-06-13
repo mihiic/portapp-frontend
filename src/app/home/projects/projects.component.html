@@ -1,4 +1,9 @@
-<h3 id="recent-projects" class="highlight">Recent projects</h3>
+<h3 *ngIf="partOfPage" id="recent-projects" class="highlight" [innerHtml]="title"></h3>
+
+<div *ngIf="!partOfPage">
+  <app-page-title *ngIf="!partOfPage" [mainTitle]="title" [subtitle]="subtitle"></app-page-title>
+  <hr />
+</div>
 <div class="row">
   <div *ngFor="let project of pagination.getCurrentPage(projects)" class="col-12 col-sm-6 col-md-6 col-lg-4">
     <app-project-card [project]="project"></app-project-card>

@@ -2,4 +2,7 @@
 <hr>
 <app-about></app-about>
 <hr>
-<app-projects></app-projects>
+<app-projects [title]="'Recent projects'"
+              [maxPages]="6"
+              [perPage]="3"
+              [partOfPage]="true"></app-projects>
