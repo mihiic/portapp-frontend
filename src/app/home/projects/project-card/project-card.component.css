@@ -18,6 +18,10 @@
   opacity: 1;
 }
 
+.project-card:hover > .project-card-more {
+  color: gold;
+}
+
 .project-card-text {
   padding-top: 120px;
   padding-left: 10px;
@@ -44,6 +48,10 @@
 
 .project-card-content {
   padding: 7px;
-  height: 135px;
+  height: 125px;
   color: grey;
+}
+
+.project-card-more {
+  color: #835f08;
 }

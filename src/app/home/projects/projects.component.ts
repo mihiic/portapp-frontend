@@ -30,7 +30,7 @@ export class ProjectsComponent implements OnInit {
       this.title = 'Projects';
     }
     if (!this.perPage) {
-      this.perPage = 12;
+      this.perPage = 9;
     }
     this.subtitle = 'Some of the projects I\'ve worked on';
     this.pagination = new Pagination(this.perPage)
