@@ -1,4 +1,4 @@
-<div class="project-card" [routerLink]="[ '/project', project.id ]">
+<div class="project-card" [@appProjectCard] [routerLink]="[ '/projects', project.id ]">
   <img class="project-card-image" [src]="project.thumbnailImage">
 
   <div class="project-card-text">
