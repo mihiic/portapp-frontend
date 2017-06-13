@@ -4,11 +4,6 @@
   display: block;
   margin: 14px auto;
   cursor: pointer;
-  /*border: 1px solid #222;*/
-}
-
-.project-card:hover {
-  /*border: 1px solid #333;*/
 }
 
 .project-card-image {
@@ -39,10 +34,11 @@
 }
 
 .project-card-technology {
-  text-shadow: 1px 1px #111;
   font-size: 14px;
   text-align: right;
-  color: darkgoldenrod;
+  color: grey;
+  font-weight: bold;
+  text-shadow: 2px 2px #000;
   padding-left: 7px;
 }
 

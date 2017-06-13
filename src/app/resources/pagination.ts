@@ -37,7 +37,6 @@ export class Pagination {
   }
 
   public hasNext(): boolean {
-    console.log(this.currentPage, this.pages);
     return this.currentPage < this.pages;
   }
 

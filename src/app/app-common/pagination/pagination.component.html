@@ -1,14 +1,20 @@
 <div class="row pagination">
   <div class="col-12">
     <div class="pagination-link"
-         (click)="pagination.prevPage()"
-         [ngClass]="{'link-active': pagination.hasPrev(), 'link-disabled': !pagination.hasPrev()}">
+       (click)="prevPage()"
+       pageScroll [href]="scrollTo"
+       [pageScrollDuration]="500"
+       [pageScrollEasing]="easingFunction"
+       [ngClass]="{'link-active': pagination.hasPrev(), 'link-disabled': !pagination.hasPrev()}">
       Prev
     </div>
     <div class="pagination-link" [innerHtml]="formatPages()"></div>
     <div class="pagination-link"
-         (click)="pagination.nextPage()"
-         [ngClass]="{'link-active': pagination.hasNext(), 'link-disabled': !pagination.hasNext()}">
+       (click)="nextPage()"
+       pageScroll [href]="scrollTo"
+       [pageScrollDuration]="500"
+       [pageScrollEasing]="easingFunction"
+       [ngClass]="{'link-active': pagination.hasNext(), 'link-disabled': !pagination.hasNext()}">
       Next
     </div>
   </div>

@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     AppComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     HomeModule,
     RouterModule.forRoot(appRoutes),

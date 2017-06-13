@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Pagination } from '../../resources/pagination';
+import { EasingLogic } from 'ng2-page-scroll';
 
 @Component({
   selector: 'app-pagination',
@@ -9,10 +10,38 @@ import { Pagination } from '../../resources/pagination';
 export class PaginationComponent implements OnInit {
   @Input() pagination: Pagination;
   @Input() list: any[];
+  @Input() scrollTo: String;
 
-  constructor() { }
+  @Output() pageChanged: EventEmitter<any>;
+
+  public easingFunction: EasingLogic;
+
+  constructor() {
+    this.pageChanged = new EventEmitter();
+    this.easingFunction = {
+      ease: (time: number, begin: number, change: number, duration: number): number => {
+        if ((time /= duration / 2) < 1) {
+          return change / 2 * Math.pow(2, 10 * (time - 1)) + begin;
+        }
+        return change / 2 * (-Math.pow(2, -10 * --time) + 2) + begin;
+      }
+    };
+  }
 
   ngOnInit() {
+    if (!this.scrollTo) {
+      this.scrollTo = 'paginated';
+    }
+  }
+
+  public prevPage(): void {
+    this.pagination.prevPage();
+    this.pageChanged.emit(null);
+  }
+
+  public nextPage(): void {
+    this.pagination.nextPage();
+    this.pageChanged.emit(null);
   }
 
   public formatPages(): String {
