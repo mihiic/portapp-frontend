@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProjectsService } from '../../projects.service';
 import { Project } from '../../resources/project';
 import { Pagination } from '../../resources/pagination';
@@ -27,7 +27,7 @@ export class ProjectsComponent implements OnInit {
 
   public setDefaults(): void {
     if (!this.title) {
-      this.title = "Projects"
+      this.title = 'Projects';
     }
     if (!this.perPage) {
       this.perPage = 12;

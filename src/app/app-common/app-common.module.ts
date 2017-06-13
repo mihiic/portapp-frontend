@@ -4,7 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PaginationComponent } from './pagination/pagination.component';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { NavigationComponent } from './navigation/navigation.component';
-import {RouterModule} from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { PageTitleComponent } from './page-title/page-title.component';
 
 @NgModule({

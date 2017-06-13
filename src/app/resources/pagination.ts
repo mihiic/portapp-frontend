@@ -21,7 +21,7 @@ export class Pagination {
   }
 
   public setPagesNumber(list: any[]): void {
-    if (list.length % this.perPage != 0) {
+    if (list.length % this.perPage !== 0) {
       this.pages = Math.floor(list.length / this.perPage) + 1;
     } else {
       this.pages = Math.floor(list.length / this.perPage);
