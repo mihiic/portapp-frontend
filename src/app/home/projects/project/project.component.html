@@ -1,2 +1,25 @@
-<app-page-title [mainTitle]="'Project'" [subtitle]="'Project described awesomely'"></app-page-title>
+<div [@routeAnimation]>
+  <app-page-title [mainTitle]="project.projectName"
+                [subtitle]="project.projectSubtitle"
+                [additional]="technologies">
+</app-page-title>
 <hr />
+</div>
+<div class="row" [@routeAnimation]>
+  <div class="col-12">
+    <h3>Gallery</h3>
+  </div>
+
+  <div class="col-12">
+    <h3>About project</h3>
+    <p *ngFor="let desc of descriptions" [innerHtml]="desc"></p>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <h3>Links</h3>
+  </div>
+
+  <div class="col-sm-6 col-12">
+    <h3>Additional Info</h3>
+  </div>
+</div>

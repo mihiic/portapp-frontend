@@ -1,0 +1,10 @@
+.additional {
+  font-size: 22px;
+  text-shadow: 2px 2px #000;
+  color: silver;
+}
+
+.tag {
+  padding: 0 10px;
+  display: inline-block;
+}

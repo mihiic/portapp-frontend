@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppCommonModule } from './app-common/app-common.module';
+import { AnimationService } from './services/animation.service';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' }
@@ -23,7 +24,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ AnimationService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

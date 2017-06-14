@@ -6,6 +6,7 @@ import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { PageTitleComponent } from './page-title/page-title.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { PageTitleComponent } from './page-title/page-title.component';
   declarations: [
     PaginationComponent,
     NavigationComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    GalleryComponent
   ],
   exports: [
     PaginationComponent,

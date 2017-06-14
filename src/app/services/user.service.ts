@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { User } from './resources/user';
+import { User } from '../resources/user';
 import { Observable } from 'rxjs/Observable';
-import { SocialLink } from './resources/socialLink';
+import { SocialLink } from '../resources/socialLink';
 
 @Injectable()
 export class UserService {

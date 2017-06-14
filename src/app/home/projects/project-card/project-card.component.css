@@ -4,6 +4,7 @@
   display: block;
   margin: 14px auto;
   cursor: pointer;
+  /*position: absolute;*/
 }
 
 .project-card-image {
@@ -54,4 +55,8 @@
 
 .project-card-more {
   color: #835f08;
+}
+
+a {
+  text-decoration: none;
 }

@@ -8,10 +8,14 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PageTitleComponent implements OnInit {
   @Input() mainTitle: String;
   @Input() subtitle: String;
+  @Input() additional: String[];
 
   constructor() { }
 
   ngOnInit() {
+    if (!this.additional) {
+      this.additional = [];
+    }
   }
 
 }

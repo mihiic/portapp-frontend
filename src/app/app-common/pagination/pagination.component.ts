@@ -35,13 +35,13 @@ export class PaginationComponent implements OnInit {
   }
 
   public prevPage(): void {
+    this.pageChanged.emit({ direction: 'prev' });
     this.pagination.prevPage();
-    this.pageChanged.emit(null);
   }
 
   public nextPage(): void {
+    this.pageChanged.emit({ direction: 'next' });
     this.pagination.nextPage();
-    this.pageChanged.emit(null);
   }
 
   public formatPages(): String {

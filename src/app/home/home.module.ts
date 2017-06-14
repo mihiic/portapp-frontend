@@ -8,6 +8,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './projects/project-card/project-card.component';
 import { ProjectComponent } from './projects/project/project.component';
 import { AppCommonModule } from '../app-common/app-common.module';
+import { ProjectsService } from '../services/projects.service';
 
 const homeRoutes: Routes = [
   { path: 'home',         component: HomepageComponent },
@@ -28,6 +29,7 @@ const homeRoutes: Routes = [
     ProjectsComponent,
     ProjectCardComponent,
     ProjectComponent
-  ]
+  ],
+  providers: [ ProjectsService ]
 })
 export class HomeModule { }

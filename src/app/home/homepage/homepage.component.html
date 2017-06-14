@@ -1,7 +1,12 @@
-<app-page-title [mainTitle]="user.getFullName()" [subtitle]="user.subtitle"></app-page-title>
-<hr>
-<app-about></app-about>
-<hr>
+<div [@routeAnimation]>
+  <app-page-title [mainTitle]="user.getFullName()"
+                  [subtitle]="user.subtitle"></app-page-title>
+  <hr>
+</div>
+<div [@routeAnimation]>
+  <app-about></app-about>
+  <hr>
+</div>
 <app-projects [title]="'Recent projects'"
               [maxPages]="3"
               [perPage]="3"

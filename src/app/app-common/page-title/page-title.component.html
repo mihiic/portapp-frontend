@@ -3,4 +3,7 @@
     <h2 class="highlight" [innerHtml]="mainTitle"></h2>
     <h4 [innerHtml]="subtitle"></h4>
   </div>
+  <div class="col-12 additional">
+    <span class="tag" *ngFor="let a of additional" [innerHtml]="a"></span>
+  </div>
 </div>

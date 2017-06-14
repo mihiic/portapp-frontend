@@ -1,13 +1,15 @@
-<div class="project-card" [@appProjectCard] [routerLink]="[ '/projects', project.id ]">
-  <img class="project-card-image" [src]="project.thumbnailImage">
+<a pageScroll [href]="'#top'" [routerLink]="[ '/projects', project.id ]">
+  <div class="project-card">
+    <img class="project-card-image" [src]="project.thumbnailImage">
 
-  <div class="project-card-text">
-    <span class="project-card-title" [innerHtml]="trimedProjectName()"></span><br />
-  </div>
+    <div class="project-card-text">
+      <span class="project-card-title" [innerHtml]="trimedProjectName()"></span><br />
+    </div>
 
-  <span class="project-card-technology" [innerHtml]="technologiesText()"></span>
-  <div class="project-card-content">
-    <div class="project-card-description" [innerHtml]="trimmedDescription()"></div>
+    <span class="project-card-technology" [innerHtml]="technologiesText()"></span>
+    <div class="project-card-content">
+      <div class="project-card-description" [innerHtml]="trimmedDescription()"></div>
+    </div>
+    <div class="project-card-more pull-right">See more...</div>
   </div>
-  <div class="project-card-more pull-right">See more...</div>
-</div>
+</a>

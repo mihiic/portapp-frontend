@@ -1,13 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProjectsService } from '../../projects.service';
+import { ProjectsService } from '../../services/projects.service';
 import { Project } from '../../resources/project';
 import { Pagination } from '../../resources/pagination';
+import { RouteAnimation } from '../../resources/animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
-  providers: [ ProjectsService ]
+  animations: [ RouteAnimation ]
 })
 export class ProjectsComponent implements OnInit {
   @Input() title: String;

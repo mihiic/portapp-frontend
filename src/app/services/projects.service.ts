@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Project } from './resources/project';
+import { Project } from '../resources/project';
 
 @Injectable()
 export class ProjectsService {
@@ -32,9 +32,19 @@ export class ProjectsService {
     });
   }
 
+  public getProject(id: number): Observable<Project> {
+    const project: Project = new Project(1, 'Ground Zero', 'in progress',
+      'znas da vrijeme je', 'assets/images/project.png', '3D game development framework');
+
+    return Observable.create(observer => {
+      observer.next(project);
+      observer.complete();
+    });
+  }
+
   public getTechnologies(project: Project): Observable<String[]> {
     const technologies: String[] = [
-      'C++11', 'OpenGL 4'
+      'C++11', 'OpenGL 4.5', 'SFML', 'Bullet3D'
     ];
 
     return Observable.create(observer => {
@@ -45,9 +55,12 @@ export class ProjectsService {
 
   public getDescriptions(project: Project): Observable<String[]> {
     const descriptions: String[] = [
-      `very cool and <b>VERY</b> serious project man`,
-      `i really mean it no lie family. it was made in one night, and it was really long night, so trust me man, it is
-      really really really that very good and this strong line describes it best`
+      `Simple 3D game development framework developed in C++11. OpenGL 4.5 is used for rendering, and SFML library for
+      things like image loading, window managment and input handling.`,
+      `Started as a bachelor's final project but was continued for personal usage. Aimed for creating simple 3D game
+      prototypes and demos to make building game development portfolio easier.`,
+      `It is in development and it will stay that way indefinitely, with new features implemented as needed for 
+      particular demos.`
     ];
 
     return Observable.create(observer => {
