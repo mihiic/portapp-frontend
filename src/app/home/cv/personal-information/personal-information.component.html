@@ -1,0 +1,24 @@
+<h4 class="highlight">Personal Information</h4>
+
+<table>
+  <tr>
+    <td class="icon-spacing"><i class="fa fa-envelope" aria-hidden="true"></i></td>
+    <td [innerHtml]="personalInformation.email"></td>
+  </tr>
+  <tr>
+    <td class="icon-spacing"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+    <td [innerHtml]="personalInformation.address"></td>
+  </tr>
+  <tr>
+    <td class="icon-spacing"><i class="fa fa-phone" aria-hidden="true"></i></td>
+    <td [innerHtml]="personalInformation.phone"></td>
+  </tr>
+  <tr>
+    <td class="icon-spacing"><i class="fa fa-calendar" aria-hidden="true"></i></td>
+    <td [innerHtml]="personalInformation.dateOfBirth.toLocaleDateString('en-US', options)"></td>
+  </tr>
+  <tr>
+    <td class="icon-spacing">Sex:</td>
+    <td><i class="fa fa-mars" aria-hidden="true"></i></td>
+  </tr>
+</table>

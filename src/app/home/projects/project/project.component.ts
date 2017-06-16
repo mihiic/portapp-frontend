@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Project } from '../../../resources/project';
 import { ProjectsService } from '../../../services/projects.service';
 import { RouteAnimation } from '../../../resources/animations';
+import { ProjectLink } from '../../../resources/projectLink';
 
 @Component({
   selector: 'app-project',
@@ -15,6 +16,8 @@ export class ProjectComponent implements OnInit {
   public technologies: String[];
   public descriptions: String[];
   public gallery: String[];
+  public links: ProjectLink[];
+  public additionalInformations: String[];
 
   constructor(
     private route: ActivatedRoute,
@@ -45,8 +48,16 @@ export class ProjectComponent implements OnInit {
       descriptions => this.descriptions = descriptions
     );
 
-    this.projectsService.getTechnologies(this.project).subscribe(
+    this.projectsService.getGallery(this.project).subscribe(
       gallery => this.gallery = gallery
     );
+
+    this.projectsService.getLinks(this.project).subscribe(
+      links => this.links = links
+    );
+
+    this.projectsService.getAdditionalInfo(this.project).subscribe(
+      additional => this.additionalInformations = additional
+    )
   }
 }

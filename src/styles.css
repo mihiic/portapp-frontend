@@ -24,6 +24,11 @@
 .social-icon {
   padding: 10px;
   color: grey;
+  text-decoration: none;
+}
+
+.no-decoration {
+  text-decoration: none;
 }
 
 .social-icon:hover {
@@ -53,3 +58,8 @@ hr {
 .gold {
   color: gold;
 }
+
+.margin-bot-md {
+  margin-bottom: 20px;
+}
+

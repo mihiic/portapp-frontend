@@ -14,13 +14,6 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.images = [
-      'http://lorempixel.com/1280/720/?r=1',
-      'http://lorempixel.com/1280/720/?r=2',
-      'http://lorempixel.com/1280/720/?r=3',
-      'http://lorempixel.com/1280/720/?r=4',
-      'http://lorempixel.com/1280/720/?r=5'
-    ];
     this.currentImage = this.images[0];
     this.currentImageIndex = 0;
   }

@@ -1,0 +1,41 @@
+.work-experience {
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.company {
+  color: #826213;
+  text-decoration: none;
+}
+
+.timeline {
+  padding-left: 30px;
+  margin-bottom: 5px;
+}
+
+.at {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.position {
+  color: darkgrey;
+}
+
+.company:hover {
+  color: gold;
+}
+
+.technologies-list {
+  padding-top: 5px;
+}
+.technology {
+  padding-left: 15px;
+  color: lightgrey;
+}

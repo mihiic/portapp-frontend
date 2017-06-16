@@ -9,11 +9,19 @@ import { ProjectCardComponent } from './projects/project-card/project-card.compo
 import { ProjectComponent } from './projects/project/project.component';
 import { AppCommonModule } from '../app-common/app-common.module';
 import { ProjectsService } from '../services/projects.service';
+import { ProjectLinkComponent } from './projects/project/project-link/project-link.component';
+import { SocialIconService } from '../app-common/social-icon.service';
+import { CvComponent } from './cv/cv.component';
+import { PersonalInformationComponent } from './cv/personal-information/personal-information.component';
+import { UserService } from '../services/user.service';
+import { WorkExperienceComponent } from './cv/work-experience/work-experience.component';
+import { EducationComponent } from './cv/education/education.component';
 
 const homeRoutes: Routes = [
   { path: 'home',         component: HomepageComponent },
   { path: 'projects/:id', component: ProjectComponent },
-  { path: 'projects',     component: ProjectsComponent }
+  { path: 'projects',     component: ProjectsComponent },
+  { path: 'cv',           component: CvComponent }
 ];
 
 @NgModule({
@@ -28,8 +36,13 @@ const homeRoutes: Routes = [
     AboutComponent,
     ProjectsComponent,
     ProjectCardComponent,
-    ProjectComponent
+    ProjectComponent,
+    ProjectLinkComponent,
+    CvComponent,
+    PersonalInformationComponent,
+    WorkExperienceComponent,
+    EducationComponent
   ],
-  providers: [ ProjectsService ]
+  providers: [ ProjectsService, SocialIconService, UserService ]
 })
 export class HomeModule { }

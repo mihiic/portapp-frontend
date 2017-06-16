@@ -4,7 +4,8 @@ export class User {
     public firstName: String,
     public lastName: String,
     public subtitle: String,
-    public profilePhoto: String
+    public profilePhoto: String,
+    public id?: number
   ) {}
 
   public getFullName(): String {

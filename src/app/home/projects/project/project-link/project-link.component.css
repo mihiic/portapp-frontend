@@ -1,0 +1,18 @@
+.project-link {
+  padding: 10px;
+  color: grey;
+  text-decoration: none;
+}
+
+.single-project-link {
+  color: grey;
+  text-decoration: none;
+}
+
+.single-project-link:hover {
+  color: gold;
+}
+
+.icon {
+  margin-right: 30px;
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { SocialLink } from '../../resources/socialLink';
 import { User } from '../../resources/user';
+import { SocialIconService } from '../../app-common/social-icon.service';
 
 @Component({
   selector: 'app-about',
@@ -14,7 +15,8 @@ export class AboutComponent implements OnInit {
   public user: User;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    public socialIconService: SocialIconService
   ) { }
 
   ngOnInit() {
@@ -29,10 +31,5 @@ export class AboutComponent implements OnInit {
     this.userService.getUser().subscribe(
       (user) => this.user = user
     )
-  }
-
-  public getSocialLinkIcon(socialLink: SocialLink): any {
-    const socialClass: string = 'fa-' + socialLink.name;
-    return { [socialClass]: true }
   }
 }

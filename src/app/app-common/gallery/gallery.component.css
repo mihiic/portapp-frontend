@@ -1,6 +1,7 @@
 .gallery {
   margin-bottom: 30px;
   position: relative;
+  box-shadow: 3px 3px #000;
 }
 
 .arrow-left {
@@ -19,12 +20,35 @@
   position: absolute;
   height: 100%;
   width: 15%;
-  background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.title-container {
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  float: left;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.title {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px #000;
 }
 
 .arrow:hover {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .pointer-container {

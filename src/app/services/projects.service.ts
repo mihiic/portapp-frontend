@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Project } from '../resources/project';
+import {ProjectLink} from "../resources/projectLink";
 
 @Injectable()
 export class ProjectsService {
@@ -71,12 +72,38 @@ export class ProjectsService {
 
   public getGallery(project: Project): Observable<String[]> {
     const images: String[] = [
-      'assets/images/project_image_1.png',
-      'assets/images/project_image_2.png'
+      'assets/images/projects/portfolio-app-1.jpg',
+      'assets/images/projects/portfolio-app-2.jpg'
     ];
 
     return Observable.create(observer => {
       observer.next(images);
+      observer.complete();
+    });
+  }
+
+  public getLinks(project: Project): Observable<ProjectLink[]> {
+    const links: ProjectLink[] = [
+      { name: 'globe', title: 'Project website', link: 'http://www.project.com'},
+      { name: 'github', title: 'Project GitHub', link: 'http://www.project.com'},
+      { name: 'youtube', title: 'YouTube Video', link: 'http://www.project.com'},
+    ];
+
+    return Observable.create(observer => {
+      observer.next(links);
+      observer.complete();
+    });
+  }
+
+  public getAdditionalInfo(project: Project): Observable<String[]> {
+    const additional: String[] = [
+      'this is a little bit of additional info',
+      'to provide information about timespan',
+      'and place where this was coded'
+    ];
+
+    return Observable.create(observer => {
+      observer.next(additional);
       observer.complete();
     });
   }

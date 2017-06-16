@@ -1,0 +1,14 @@
+<div class="project-link">
+  <a href="{{ projectLink.link }}" class="single-project-link">
+    <table>
+      <tr>
+        <td>
+          <i class="fa fa-3x icon"
+             [ngClass]="socialIconService.getSocialIconClass(projectLink.name)"
+             aria-hidden="true"></i>
+        </td>
+        <td [innerHtml]="projectLink.title"></td>
+      </tr>
+    </table>
+  </a>
+</div>

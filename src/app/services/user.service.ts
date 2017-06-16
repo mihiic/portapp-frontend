@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { User } from '../resources/user';
 import { Observable } from 'rxjs/Observable';
 import { SocialLink } from '../resources/socialLink';
+import { PersonalInformation } from '../resources/personalInformation';
+import { WorkExperience } from '../resources/workExperience';
 
 @Injectable()
 export class UserService {
@@ -50,10 +52,45 @@ export class UserService {
       { name: 'linkedin', link: 'https://www.linkedin.com/in/mihiic/'},
       { name: 'youtube', link: 'https>//www.facebook.com/'},
       { name: 'github', link: 'https://www.github.com/' }
-    ]
+    ];
 
     return Observable.create(observer => {
       observer.next(socialLinks);
+      observer.complete();
+    })
+  }
+
+  public getPersonalInformation(): Observable<PersonalInformation> {
+    const personalInformation: PersonalInformation = {
+      email: 'mihic.medan@gmail.com',
+      address: 'Ferežani 73, 48260 Križevci, Croatia',
+      phone: '+385958897776',
+      sex: 'male',
+      dateOfBirth: new Date(1995, 6, 12)
+    };
+
+    return Observable.create(observer => {
+      observer.next(personalInformation);
+      observer.complete();
+    })
+  }
+
+  public getWorkExperience(): Observable<WorkExperience[]> {
+    const workExperience: WorkExperience[] = [
+      {
+        position: 'Web Developer', company: 'Ingemark', companyUrl: 'http://www.ingemark.com',
+        from: new Date(2016, 4), until: null, description: 'Writing features and automated tests.',
+        technologies: ['Ruby on Rails', 'AngularJS']
+      },
+      {
+        position: 'Game Developer', company: 'Icefix', companyUrl: 'hehe',
+        from: new Date(2015, 4), until: new Date(2016, 4), description: 'Game development.',
+        technologies: ['C#', 'Unity3D']
+      }
+    ];
+
+    return Observable.create(observer => {
+      observer.next(workExperience);
       observer.complete();
     })
   }

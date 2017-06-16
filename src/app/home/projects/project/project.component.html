@@ -7,20 +7,22 @@
 </div>
 <div class="row" [@routeAnimation]>
   <div class="col-12">
-    <h3>Gallery</h3>
-    <app-gallery [images]="['http://lorempixel.com/1280/720']"></app-gallery>
+    <h3 class="highlight">Gallery</h3>
+    <app-gallery [images]="gallery"></app-gallery>
   </div>
 
-  <div class="col-12">
-    <h3>About project</h3>
+  <div class="col-12 margin-bot-md">
+    <h3 class="highlight">About project</h3>
     <p *ngFor="let desc of descriptions" [innerHtml]="desc"></p>
   </div>
 
   <div class="col-12 col-sm-6">
-    <h3>Links</h3>
+    <h3 class="highlight">Links</h3>
+    <app-project-link *ngFor="let link of links" [projectLink]="link"></app-project-link>
   </div>
 
   <div class="col-sm-6 col-12">
-    <h3>Additional Info</h3>
+    <h3 class="highlight">Additional Info</h3>
+    <p *ngFor="let additional of additionalInformations" [innerHtml]="additional"></p>
   </div>
 </div>
