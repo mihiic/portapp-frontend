@@ -59,7 +59,7 @@ export class ProjectsService {
       things like image loading, window managment and input handling.`,
       `Started as a bachelor's final project but was continued for personal usage. Aimed for creating simple 3D game
       prototypes and demos to make building game development portfolio easier.`,
-      `It is in development and it will stay that way indefinitely, with new features implemented as needed for 
+      `It is in development and it will stay that way indefinitely, with new features implemented as needed for
       particular demos.`
     ];
 

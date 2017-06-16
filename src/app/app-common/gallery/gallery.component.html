@@ -1,3 +1,13 @@
-<p>
-  gallery works!
-</p>
+<div class="gallery">
+  <img class="img img-fluid" [src]="currentImage">
+  <div class="arrow arrow-left" (click)="prevImage()">
+    <div class="pointer-container">
+      <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="arrow arrow-right" (click)="nextImage()">
+    <div class="pointer-container">
+      <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

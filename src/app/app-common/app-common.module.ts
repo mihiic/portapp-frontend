@@ -13,7 +13,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     CommonModule,
     NgbModule,
     RouterModule,
-    Ng2PageScrollModule.forRoot(),
+    Ng2PageScrollModule.forRoot()
   ],
   declarations: [
     PaginationComponent,
@@ -24,7 +24,8 @@ import { GalleryComponent } from './gallery/gallery.component';
   exports: [
     PaginationComponent,
     NavigationComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    GalleryComponent
   ]
 })
 export class AppCommonModule { }
