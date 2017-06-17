@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { SocialLink } from '../resources/socialLink';
 import { PersonalInformation } from '../resources/personalInformation';
 import { WorkExperience } from '../resources/workExperience';
+import { Education } from '../resources/education';
 
 @Injectable()
 export class UserService {
@@ -91,6 +92,24 @@ export class UserService {
 
     return Observable.create(observer => {
       observer.next(workExperience);
+      observer.complete();
+    })
+  }
+
+  public getEducation(): Observable<Education[]> {
+    const education: Education[] = [
+      {
+        title: 'Bachelor of Computer Science', from: new Date(2014, 9), to: new Date(2017, 7),
+        institution: 'Faculty of Electrical Engineering and Computing, University of Zagreb, Croatia'
+      },
+      {
+        title: 'Master of Computer Science', from: new Date(2017, 9),
+        institution: 'Faculty of Electrical Engineering and Computing, University of Zagreb, Croatia'
+      }
+    ];
+
+    return Observable.create(observer => {
+      observer.next(education);
       observer.complete();
     })
   }

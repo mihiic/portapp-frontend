@@ -1,6 +1,19 @@
-<app-page-title [mainTitle]="'Mihael Međan'" [subtitle]="'Curriculum Vitae'"></app-page-title>
-<hr />
-<app-personal-information [personalInformation]="personalInformation" [user]="user"></app-personal-information>
-<hr />
-<h4 class="highlight">Work Experience</h4>
-<app-work-experience *ngFor="let we of workExperience" [workExperience]="we">
+<div [@routeAnimation]>
+  <app-page-title [@routeAnimation] [mainTitle]="'Mihael Međan'" [subtitle]="'Curriculum Vitae'"></app-page-title>
+  <hr />
+  <app-personal-information [@routeAnimation]
+                            [personalInformation]="personalInformation"
+                            [user]="user">
+  </app-personal-information>
+
+  <hr />
+
+  <h4 class="highlight">Work Experience</h4>
+  <app-work-experience *ngFor="let we of workExperience" [workExperience]="we"></app-work-experience>
+
+  <hr />
+
+  <h4 class="highlight">Education and Training</h4>
+  <app-education *ngFor="let ed of education" [education]="ed"></app-education>
+
+</div>

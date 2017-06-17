@@ -1,0 +1,30 @@
+.education {
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+p {
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+.year {
+  color: grey;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: darkgrey;
+}
+
+.timeline {
+  padding-left: 20px;
+}
+
+.institution {
+  padding-left: 20px;
+  padding-top: 10px;
+}
