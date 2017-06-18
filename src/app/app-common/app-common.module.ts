@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { RouterModule } from '@angular/router';
 import { PageTitleComponent } from './page-title/page-title.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -19,13 +20,15 @@ import { GalleryComponent } from './gallery/gallery.component';
     PaginationComponent,
     NavigationComponent,
     PageTitleComponent,
-    GalleryComponent
+    GalleryComponent,
+    FooterComponent
   ],
   exports: [
     PaginationComponent,
     NavigationComponent,
     PageTitleComponent,
-    GalleryComponent
+    GalleryComponent,
+    FooterComponent
   ]
 })
 export class AppCommonModule { }

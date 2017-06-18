@@ -16,4 +16,12 @@
   <h4 class="highlight">Education and Training</h4>
   <app-education *ngFor="let ed of education" [education]="ed"></app-education>
 
+  <hr />
+
+  <h4 class="highlight">Personal Skills</h4>
+  <app-personal-skills [personalSkills]="personalSkills"></app-personal-skills>
+
+  <hr />
+  <h4 class="highlight">Technical Skills</h4>
+  <app-technical-skill *ngFor="let tech of technicalSkills" [technicalSkill]="tech"></app-technical-skill>
 </div>

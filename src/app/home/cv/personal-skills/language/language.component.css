@@ -1,0 +1,28 @@
+.slight-highlight {
+  color: darkgrey;
+}
+
+.underlined {
+  border-style: none;
+  border-bottom: solid 1px darkgrey;
+}
+
+.language {
+  color: white;
+}
+
+.intended {
+  padding-left: 25px;
+}
+
+.table-fill {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.spaced {
+  margin-bottom: 15px;
+}

@@ -5,6 +5,7 @@ import { User } from '../../resources/user';
 import { WorkExperience } from '../../resources/workExperience';
 import { RouteAnimation } from '../../resources/animations';
 import { Education } from 'app/resources/education';
+import { PersonalSkills, TechnicalSkill } from '../../resources/skills';
 
 @Component({
   selector: 'app-cv',
@@ -16,7 +17,9 @@ export class CvComponent implements OnInit {
   public personalInformation: PersonalInformation;
   public user: User;
   public workExperience: WorkExperience[];
+  public technicalSkills: TechnicalSkill[];
   public education: Education[];
+  public personalSkills: PersonalSkills;
 
   constructor(
     private userService: UserService
@@ -38,5 +41,13 @@ export class CvComponent implements OnInit {
     this.userService.getEducation().subscribe(
       education => this.education = education
     );
+
+    this.userService.getPersonalSkills().subscribe(
+      personalSkills => this.personalSkills = personalSkills
+    );
+
+    this.userService.getTechnicalSkills().subscribe(
+      techSkills => this.technicalSkills = techSkills
+    )
   }
 }

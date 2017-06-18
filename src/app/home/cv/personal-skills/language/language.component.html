@@ -1,0 +1,35 @@
+<div class="row margin-bot-md">
+  <div class="col-12">
+    <span class="language" [innerHtml]="lang.name"></span>
+  </div>
+  <div class="intended col-sm-4 col-12 spaced">
+    <div class="slight-highlight"><b>Understanding</b></div>
+    <table class="full-width">
+      <tr>
+        <td class="table-fill slight-highlight">Listening</td>
+        <td class="table-fill slight-highlight">Reading</td>
+      </tr>
+      <tr>
+        <td class="table-fill" [innerHtml]="lang.listening"></td>
+        <td class="table-fill" [innerHtml]="lang.reading"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="intended col-sm-4 col-12 spaced">
+    <div class="slight-highlight"><b>Speaking</b></div>
+    <table class="full-width">
+      <tr>
+        <td class="table-fill slight-highlight">Spoken interaction</td>
+        <td class="table-fill slight-highlight">Spoken production</td>
+      </tr>
+      <tr>
+        <td class="table-fill" [innerHtml]="lang.spokenInteraction"></td>
+        <td class="table-fill" [innerHtml]="lang.spokenProduction"></td>
+      </tr>
+    </table>
+  </div>
+  <div class="intended col-sm-4 col-12 spaced">
+    <div class="slight-highlight"><b>Writing</b></div>
+    <div class="table-fill" [innerHtml]="lang.writing"></div>
+  </div>
+</div>

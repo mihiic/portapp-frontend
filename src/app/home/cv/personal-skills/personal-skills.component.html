@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12 personal-skills">
+    <div>
+      <span>Native language: </span>
+      <span class="slight-highlight" [innerHtml]="personalSkills.motherLanguage"></span>
+    </div>
+    <div class="margin-top-sm">Other languages:</div>
+    <div *ngFor="let lang of personalSkills.languages">
+      <app-language [lang]="lang"></app-language>
+    </div>
+
+    <div>
+      <span>Driving license: </span>
+      <span class="slight-highlight" [innerHtml]="getLicenseCSV()"></span>
+    </div>
+  </div>
+</div>

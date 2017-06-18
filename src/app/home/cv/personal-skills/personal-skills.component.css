@@ -1,0 +1,25 @@
+.personal-skills {
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.slight-highlight {
+  color: darkgrey;
+}
+
+.margin-top-sm {
+  margin-top: 15px;
+}
+
+p {
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  padding-top: 10px;
+  color: darkgrey;
+}

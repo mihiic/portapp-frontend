@@ -5,6 +5,7 @@ import { SocialLink } from '../resources/socialLink';
 import { PersonalInformation } from '../resources/personalInformation';
 import { WorkExperience } from '../resources/workExperience';
 import { Education } from '../resources/education';
+import {PersonalSkills, TechnicalSkill} from "../resources/skills";
 
 @Injectable()
 export class UserService {
@@ -110,6 +111,36 @@ export class UserService {
 
     return Observable.create(observer => {
       observer.next(education);
+      observer.complete();
+    })
+  }
+
+  public getPersonalSkills(): Observable<PersonalSkills> {
+    const personalSkills: PersonalSkills = {
+      motherLanguage: 'Croatian',
+      languages: [
+        { name: 'English', listening: 'A1', reading: 'A2',
+          spokenInteraction: 'B2', spokenProduction: 'C2', writing: 'C1' },
+        { name: 'German', listening: 'A2', reading: 'A1',
+          spokenInteraction: 'C2', spokenProduction: 'A2', writing: 'B1' },
+      ],
+      drivingLicense: ['B', 'F', 'AM']
+    };
+
+    return Observable.create(observer => {
+      observer.next(personalSkills);
+      observer.complete();
+    })
+  }
+
+  public getTechnicalSkills(): Observable<TechnicalSkill[]> {
+    const techSkills: TechnicalSkill[] = [
+      { name: 'Ruby on Rails', level: 'advanced', description: 'One year of work experience on legacy projects.' },
+      { name: 'AngularJS', level: 'intermediate', description: 'One year of work experience on legacy projects.' }
+    ];
+
+    return Observable.create(observer => {
+      observer.next(techSkills);
       observer.complete();
     })
   }
