@@ -19,12 +19,7 @@ export interface TechnicalSkill {
   description: string
 }
 
-export interface OrganisationSkill {
-  name: string,
-  description: string
-}
-
-export interface ManagmentSkill {
+export interface OtherSkill {
   name: string,
   description: string
 }

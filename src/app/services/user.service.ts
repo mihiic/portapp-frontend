@@ -5,7 +5,7 @@ import { SocialLink } from '../resources/socialLink';
 import { PersonalInformation } from '../resources/personalInformation';
 import { WorkExperience } from '../resources/workExperience';
 import { Education } from '../resources/education';
-import {PersonalSkills, TechnicalSkill} from "../resources/skills";
+import { OtherSkill, PersonalSkills, TechnicalSkill } from '../resources/skills';
 
 @Injectable()
 export class UserService {
@@ -120,9 +120,9 @@ export class UserService {
       motherLanguage: 'Croatian',
       languages: [
         { name: 'English', listening: 'A1', reading: 'A2',
-          spokenInteraction: 'B2', spokenProduction: 'C2', writing: 'C1' },
-        { name: 'German', listening: 'A2', reading: 'A1',
-          spokenInteraction: 'C2', spokenProduction: 'A2', writing: 'B1' },
+          spokenInteraction: 'B2', spokenProduction: 'C2', writing: 'C1' }
+        // { name: 'German', listening: 'A2', reading: 'A1',
+        //   spokenInteraction: 'C2', spokenProduction: 'A2', writing: 'B1' },
       ],
       drivingLicense: ['B', 'F', 'AM']
     };
@@ -141,6 +141,30 @@ export class UserService {
 
     return Observable.create(observer => {
       observer.next(techSkills);
+      observer.complete();
+    })
+  }
+
+  public getOrganisationSkills(): Observable<OtherSkill[]> {
+    const organisationSkills: OtherSkill[] = [
+      { name: 'Rat race', description: 'I am a fast rat.' },
+      { name: 'Annual rat race', description: 'I am a faster rat.' }
+    ];
+
+    return Observable.create(observer => {
+      observer.next(organisationSkills);
+      observer.complete();
+    })
+  }
+
+  public getManagmentSkills(): Observable<OtherSkill[]> {
+    const managmentSkills: OtherSkill[] = [
+      { name: 'Rat race', description: 'I am a fast rat.' },
+      { name: 'Annual rat race', description: 'I am a faster rat.' }
+    ];
+
+    return Observable.create(observer => {
+      observer.next(managmentSkills);
       observer.complete();
     })
   }

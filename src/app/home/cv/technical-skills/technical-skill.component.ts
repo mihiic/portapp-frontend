@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TechnicalSkill } from "../../../resources/skills";
+import { TechnicalSkill } from '../../../resources/skills';
 
 @Component({
   selector: 'app-technical-skill',

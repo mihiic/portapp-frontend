@@ -19,6 +19,7 @@ import { EducationComponent } from './cv/education/education.component';
 import { PersonalSkillsComponent } from './cv/personal-skills/personal-skills.component';
 import { LanguageComponent } from './cv/personal-skills/language/language.component';
 import { TechnicalSkillComponent } from './cv/technical-skills/technical-skill.component';
+import { OtherSkillComponent } from './cv/other-skill/other-skill.component';
 
 const homeRoutes: Routes = [
   { path: 'home',         component: HomepageComponent },
@@ -47,7 +48,8 @@ const homeRoutes: Routes = [
     EducationComponent,
     PersonalSkillsComponent,
     LanguageComponent,
-    TechnicalSkillComponent
+    TechnicalSkillComponent,
+    OtherSkillComponent
   ],
   providers: [ ProjectsService, SocialIconService, UserService ]
 })

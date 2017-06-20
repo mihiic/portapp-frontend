@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Project } from '../resources/project';
-import {ProjectLink} from "../resources/projectLink";
+import { ProjectLink } from '../resources/projectLink';
 
 @Injectable()
 export class ProjectsService {
