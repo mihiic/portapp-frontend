@@ -1,11 +1,9 @@
-<div class="row">
-  <div class="col-12 education">
-    <span class="title" [innerHtml]="education.title"></span>
-    <div class="timeline">
-      <span class="year" [innerHtml]="getLocaleDate(education.from)"></span>
-      <span class="year"> - </span>
-      <span class="year" [innerHtml]="getLocaleDate(education.to)"></span>
-    </div>
-    <div class="institution" [innerHtml]="education.institution"></div>
+<div class="education">
+  <span class="title" [innerHtml]="education.title"></span>
+  <div class="timeline">
+    <span class="year" [innerHtml]="getLocaleDate(education.from)"></span>
+    <span class="year"> - </span>
+    <span class="year" [innerHtml]="getLocaleDate(education.to)"></span>
   </div>
+  <div class="institution" [innerHtml]="education.institution"></div>
 </div>

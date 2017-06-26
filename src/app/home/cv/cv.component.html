@@ -9,16 +9,28 @@
   <hr />
 
   <h4 class="highlight">Work Experience</h4>
-  <app-work-experience *ngFor="let we of workExperience" [workExperience]="we"></app-work-experience>
+  <div class="row">
+    <div class="col-sm-6 col-12" *ngFor="let we of workExperience" >
+      <app-work-experience [workExperience]="we"></app-work-experience>
+    </div>
+  </div>
 
   <hr />
 
   <h4 class="highlight">Education and Training</h4>
-  <app-education *ngFor="let ed of education" [education]="ed"></app-education>
+  <div class="row">
+    <div class="col-sm-6 col-12" *ngFor="let ed of education" >
+      <app-education [education]="ed"></app-education>
+    </div>
+  </div>
 
   <hr />
   <h4 class="highlight">Technical Skills</h4>
-  <app-technical-skill *ngFor="let tech of technicalSkills" [technicalSkill]="tech"></app-technical-skill>
+  <div class="row">
+    <div class="col-sm-6 col-12" *ngFor="let tech of technicalSkills" >
+      <app-technical-skill [technicalSkill]="tech"></app-technical-skill>
+    </div>
+  </div>
 
   <hr />
   <h4 class="highlight">Personal Skills</h4>
@@ -27,12 +39,20 @@
   <div *ngIf="this.managmentSkills.length > 0">
     <hr />
     <h4 class="highlight">Managment Skills</h4>
-    <app-other-skill *ngFor="let skill of managmentSkills" [skill]="skill"></app-other-skill>
+    <div class="row">
+      <div class="col-12 col-sm-6" *ngFor="let skill of managmentSkills" >
+        <app-other-skill [skill]="skill"></app-other-skill>
+      </div>
+    </div>
   </div>
 
   <div *ngIf="this.organisationSkills.length > 0">
     <hr />
     <h4 class="highlight">Organisation Skills</h4>
-    <app-other-skill *ngFor="let skill of organisationSkills" [skill]="skill"></app-other-skill>
+    <div class="row">
+      <div class="col-12 col-sm-6" *ngFor="let skill of organisationSkills" >
+        <app-other-skill [skill]="skill"></app-other-skill>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,19 +1,17 @@
-<div class="row">
-  <div class="col-12 work-experience">
-    <h5>
-      <span class="position" [innerHtml]="workExperience.position"></span>
-      <span class="at">at</span>
-      <a class="company" href="{{ workExperience.companyUrl }}"
-         [innerHtml]="workExperience.company"></a>
-    </h5>
-    <p class="timeline">
-      <span [innerHtml]="getLocaleDate(workExperience.from)"></span> -
-      <span [innerHtml]="getLocaleDate(workExperience.until)"></span>
-    </p>
-    <p [innerHtml]="workExperience.description"></p>
-    <p class="technologies-list">
-      <b>Technologies: </b>
-      <span *ngFor="let tech of workExperience.technologies" [innerHtml]="tech" class="technology"></span>
-    </p>
-  </div>
+<div class="work-experience">
+  <h5>
+    <span class="position" [innerHtml]="workExperience.position"></span>
+    <span class="at">at</span>
+    <a class="company" href="{{ workExperience.companyUrl }}"
+       [innerHtml]="workExperience.company"></a>
+  </h5>
+  <p class="timeline">
+    <span [innerHtml]="getLocaleDate(workExperience.from)"></span> -
+    <span [innerHtml]="getLocaleDate(workExperience.until)"></span>
+  </p>
+  <p [innerHtml]="workExperience.description"></p>
+  <p class="technologies-list">
+    <b>Technologies: </b>
+    <span *ngFor="let tech of workExperience.technologies" [innerHtml]="tech" class="technology"></span>
+  </p>
 </div>
