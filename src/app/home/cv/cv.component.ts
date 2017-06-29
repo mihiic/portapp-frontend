@@ -60,4 +60,8 @@ export class CvComponent implements OnInit {
       managment => this.managmentSkills = managment
     )
   }
+
+  public hasAdditionalInfo():boolean {
+    return true;
+  }
 }
